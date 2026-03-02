@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 🦀 CRAB-SPYD3R-BOT v0.0.5
-Author: Advanced Security Framework
+Author: Ian Carter Kulani
 Description: Multi-platform security bot with 2000+ commands including:
             - Advanced nmap scanning with all options
             - Metasploit-style auxiliary modules
@@ -2737,4 +2737,5 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
+
     main()
