@@ -26,8 +26,9 @@ cd crab-spyd3r-bot
 Ubuntu/Debian/Kali
 bash
 # Update system
+```bash
 sudo apt update && sudo apt upgrade -y
-
+```
 # Install essential packages
 ```bash
 sudo apt install -y \
@@ -65,9 +66,10 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 chmod 755 msfinstall
 ./msfinstall
 ```
-macOS
-```bash
+# macOS
+
 # Install Homebrew if not installed
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 # Install packages
@@ -89,6 +91,7 @@ brew install \
 ```
 
 # Install Metasploit
+```bash
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod 755 msfinstall
 ./msfinstall
@@ -300,8 +303,12 @@ openssl req -x509 -newkey rsa:4096 \
   -nodes
 
 # Or use Let's Encrypt
+```bash
 sudo apt install certbot
+```
+```bash
 sudo certbot certonly --standalone -d yourdomain.com
+```
 Configure Firewall
 bash
 # UFW (Ubuntu)
@@ -313,37 +320,45 @@ sudo ufw allow 4444/tcp    # Metasploit
 sudo ufw enable
 
 # FirewallD (RHEL/CentOS)
+```bash
 sudo firewall-cmd --permanent --add-port=5000/tcp
 sudo firewall-cmd --permanent --add-port=8080/tcp
 sudo firewall-cmd --permanent --add-port=8443/tcp
 sudo firewall-cmd --reload
-🧪 Testing Installation
+```
+# 🧪 Testing Installation
 bash
 # Test Python environment
 python3 -c "import sys; print(f'Python {sys.version}')"
 
 # Test dependencies
+```bash
 python3 -c "
 import discord, telethon, selenium, slack_sdk
 print('✅ All imports successful')
 "
-
+```
 # Test database
+```bash
 python3 -c "
 from crab_spyd3r_bot import DatabaseManager
 db = DatabaseManager()
 print('✅ Database connection successful')
 "
+```
 
 # Test nmap
+```bash
 nmap --version
-
+```
 # Test Metasploit
 msfconsole --version
 
 # Run the bot in test mode
+```bash
 python3 crab-spyd3r-bot.py --test
-🚦 Running the Bot
+```
+# 🚦 Running the Bot
 Production Mode (Systemd)
 Create service file /etc/systemd/system/crab-bot.service:
 
@@ -440,58 +455,67 @@ bash
 sudo chown -R $USER:$USER ~/.crabbot/
 Port already in use
 
-bash
+```bash
 sudo lsof -i :5000
 sudo kill -9 <PID>
 Docker connection refused
+```
 
-bash
 # Check if Docker is running
+```bash
 sudo systemctl status docker
+```
 # Restart Docker
+```bash
 sudo systemctl restart docker
+```
 Nmap not found
 
-bash
+```bash
 sudo apt install nmap  # Linux
 brew install nmap      # macOS
-📚 Additional Resources
-Documentation: https://docs.crab-spyd3r-bot.com
+```
+# 📚 Additional Resources
 
-GitHub: https://github.com/iank/crab-spyd3r-bot
+# Documentation: 
+
+# GitHub 
+```bash
+git clone https://github.com/Iankulani/crab-spyd3r-bot.git
+```
 
 Discord Support: https://discord.gg/crabspyd3r
 
 API Reference: https://api.crab-spyd3r-bot.com/docs
 
-✅ Verification Checklist
+# ✅ Verification Checklist
 Python 3.7+ installed
 
 All dependencies installed
 
-Database initialized
+* Database initialized
 
-Configuration file created
+* Configuration file created
 
-Discord bot token configured (optional)
+* Discord bot token configured (optional)
 
-Telegram API credentials configured (optional)
+* Telegram API credentials configured (optional)
 
-WhatsApp Selenium setup (optional)
+* WhatsApp Selenium setup (optional)
 
-Slack tokens configured (optional)
+* Slack tokens configured (optional)
 
-Signal phone number registered (optional)
+* Signal phone number registered (optional)
 
-Firewall rules applied
+* Firewall rules applied
 
-SSL certificates generated (for HTTPS)
+* SSL certificates generated (for HTTPS)
 
-Systemd service created (production)
+* Systemd service created (production)
 
-Backup strategy implemented
+* Backup strategy implemented
 
-🎉 Installation Complete!
+# 🎉 Installation Complete!
 Your Crab-Spyd3r-Bot is now ready to use!
 
 Type !help in any connected platform to see available commands
@@ -502,5 +526,5 @@ Check logs at ~/.crabbot/logs/crabbot.log
 
 For support, join our Discord server or open an issue on GitHub.
 
-Happy Hacking! 🦀
+# Happy Hacking! 🦀
 
