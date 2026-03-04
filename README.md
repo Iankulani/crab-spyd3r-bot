@@ -17,14 +17,14 @@ wget -qO- https://raw.githubusercontent.com/iank/crab-spyd3r-bot/main/install.sh
 ```
 # 📥 Manual Installation
 
-Clone Repository
+# How to Clone the Repository
 ```bash
 clone git https://github.com/Iankulani/crab-spyd3r-bot.git 
 cd crab-spyd3r-bot
 ```
 # 2. System Dependencies
 Ubuntu/Debian/Kali
-bash
+
 # Update system
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -63,6 +63,8 @@ sudo apt install -y \
 # Install Metasploit (optional but recommended)
 ```bash
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+```
+```bash
 chmod 755 msfinstall
 ./msfinstall
 ```
@@ -103,7 +105,7 @@ wsl --install -d Ubuntu
 ```
 # Then follow Ubuntu instructions inside WSL
 3. Python Environment
-bash
+
 # Create virtual environment
 ```bash
 python3 -m venv venv
