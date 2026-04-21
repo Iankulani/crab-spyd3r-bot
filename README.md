@@ -530,3 +530,6 @@ For support, join our Discord server or open an issue on GitHub.
 
 # Happy Hacking! 🦀
 
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Iankulani/crab-spyd3r-bot&type=Date)](https://star-history.com/#Iankulani/crab-spyd3r-bot&Date)
