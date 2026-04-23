@@ -137,7 +137,7 @@ cp config.example.yaml ~/.crabbot/config/config.yaml
 
 # Edit configuration
 nano ~/.crabbot/config/config.yaml
-5. Database Setup
+# 5. Database Setup
 ```bash
 # Initialize SQLite database
 
@@ -181,9 +181,12 @@ docker-compose down
 Using Docker Only
 bash
 # Build image
+```bash
 docker build -t crab-spyd3r-bot .
+```
 
 # Run container
+```bash
 docker run -d \
   --name crab-bot \
   -p 5000:5000 \
@@ -195,7 +198,7 @@ docker run -d \
   --cap-add=NET_ADMIN \
   --cap-add=NET_RAW \
   crab-spyd3r-bot
-
+```
 # Run with specific mode
 ```bash
 docker run -it --rm crab-spyd3r-bot web  # Web interface
